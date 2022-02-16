@@ -42,7 +42,7 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/NuriUtil.java" target-dir="src/com/nuriinfos/cordova/plugins/NuriUtil" />
+        <source-file src="src/android/NuriUtil.java" target-dir="src/com/nuriinfos/cordova/plugins" />
     </platform>
 
     <!-- ios -->

@@ -16,7 +16,7 @@
        specific language governing permissions and limitations
        under the License.
 */
-package com.nuriinfos.cordova.plugins.NuriUtil;
+package com.nuriinfos.cordova.plugins;
 
 import java.util.TimeZone;
 
@@ -28,7 +28,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.content.Context;
+import android.content.pm.PackageManager;
 import android.provider.Settings;
+
+import static android.Manifest.permission.READ_PHONE_NUMBERS;
+import static android.Manifest.permission.READ_PHONE_STATE;
+import android.telephony.TelephonyManager;
+import androidx.core.app.ActivityCompat;
 
 public class NuriUtil extends CordovaPlugin {
     public static final String TAG = "NuriUtil";
@@ -53,10 +60,10 @@ public class NuriUtil extends CordovaPlugin {
      * @param cordova The context of the main Activity.
      * @param webView The CordovaWebView Cordova is running in.
      */
-    public void initialize(CordovaInterface cordova, CordovaWebView webView) {
-        super.initialize(cordova, webView);
-        // Device.uuid = getUuid();
-    }
+    // public void initialize(CordovaInterface cordova, CordovaWebView webView) {
+    //     super.initialize(cordova, webView);
+    //     // Device.uuid = getUuid();
+    // }
 
     /**
      * Executes the request and returns PluginResult.
